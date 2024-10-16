@@ -11,8 +11,9 @@ fetch(path)
         const links = document.querySelectorAll("#navbar-container a.nav-link");
         links.forEach(link => {
             if (window.location.pathname.includes("/pages/")) {
+                console.log("Ajustando link da navbar...");
                 link.href = link.href.replace("index.html", "../index.html");
-                link.href = link.href.replace("pages/", "../pages/");
+                link.href = link.href.replace("pages/", "");
             }
         });
     })
